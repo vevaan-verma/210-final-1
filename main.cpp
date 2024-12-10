@@ -1,4 +1,4 @@
-// COMSC-210 | Lab 21 | Vevaan Verma
+// COMSC-210 | Final #1 | Vevaan Verma
 using namespace std;
 #include <iostream>
 #include <string>
