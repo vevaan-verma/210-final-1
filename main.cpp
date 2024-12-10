@@ -6,17 +6,18 @@ using namespace std;
 #include <vector>
 #include <set>
 
+/* STRUCTURE DEFINITIONS */
 struct Booth1Customer;
 struct Booth2Customer;
 struct Booth3Customer;
 struct Booth4Customer;
 
-/* GLOBAL CONSTANTS */
-const string names[] = { "Alice", "Bob", "Charlie", "David", "Eve" };
-const string drinkOrders[] = { "Coffee", "Tea", "Water", "Soda", "Juice" };
-const string muffinOrders[] = { "Blueberry", "Chocolate Chip", "Banana Nut", "Pumpkin Spice", "Lemon Poppy" };
-const string braceletNames[] = { "Best Friends", "Sisters", "BFFs", "Soulmates", "Twins" };
-const string weekndVinyls[] = { "House of Balloons", "Thursday", "Echoes of Silence", "Kiss Land", "Beauty Behind the Madness" };
+/* DATA ARRAYS */
+const string names[] = { "Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Heidi", "Ivan", "Judy", "Kevin", "Linda", "Mallory", "Nancy", "Oscar", "Peggy", "Quentin", "Randy", "Steve", "Tina", "Ursula", "Victor", "Wendy", "Xander", "Yvonne", "Zelda" };
+const string drinkOrders[] = { "Coffee", "Tea", "Water", "Soda", "Juice", "Smoothie", "Milkshake", "Iced Coffee", "Iced Tea", "Lemonade" };
+const string muffinOrders[] = { "Blueberry", "Chocolate Chip", "Banana Nut", "Pumpkin Spice", "Lemon Poppy", "Apple Cinnamon", "Cranberry Orange", "Double Chocolate", "Raspberry", "Strawberry" };
+const string braceletNames[] = { "Best Friends", "Sisters", "BFFs", "Soulmates", "Twins", "Cousins", "Mother-Daughter", "Father-Son", "Grandma-Granddaughter", "Grandpa-Grandson" };
+const string weekndVinyls[] = { "The Noise EP", "House of Balloons", "Thursday", "Echoes of Silence", "Kiss Land", "Beauty Behind the Madness", "Starboy", "My Dear Melancholy,", "After Hours", "Dawn FM", "Live at SoFi Stadium", "The Idol Soundtrack", "Hurry Up Tomorrow" };
 
 /* FUNCTION PROTOTYPES */
 void addNode(Booth1Customer*& head, Booth1Customer* newNode);
@@ -57,6 +58,8 @@ struct Booth4Customer {
 // arguments: none
 // returns: int - the exit code of the program
 int main() {
+
+	srand(time(0)); // seed the random number generator
 
 	/* LINKED LIST */
 	Booth1Customer* booth1Head = nullptr; // create a linked list of customers
@@ -141,7 +144,7 @@ int main() {
 		// serve customer at the front of the vector if there is one
 		if (!booth3.empty()) {
 
-			cout << "        Serving " << booth3.front()->customerName << " a " << booth3.front()->braceletName << endl;
+			cout << "        Selling " << booth3.front()->customerName << " a " << booth3.front()->braceletName << " Friendship Bracelet" << endl;
 
 			// remove the first customer from the vector
 			booth3.erase(booth3.begin());
