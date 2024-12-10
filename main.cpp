@@ -162,7 +162,7 @@ int main() {
 		if (!booth4.empty()) {
 
 			Booth4Customer* customer = *booth4.begin();
-			cout << "        Serving " << customer->customerName << " a " << customer->vinylOrder << " Vinyl" << endl;
+			cout << "        Selling " << customer->customerName << " a " << customer->vinylOrder << " Vinyl" << endl;
 
 			// remove the first customer from the set
 			booth4.erase(booth4.begin());
